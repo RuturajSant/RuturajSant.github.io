@@ -90,8 +90,7 @@ nav {
 	transition: transform 500ms ease;
 }
 
-@supports (backdrop-filter: blur(8px);
-) {
+@supports (backdrop-filter: blur(8px)) {
 	.primary-navigation {
 		background: hsla(0 0% 0%/ 0.08);
 		backdrop-filter: blur(8px);
@@ -102,6 +101,7 @@ nav {
 .primary-navigation:focus-within {
 	transform: translateX(0%);
 }
+
 .nav-item {
 	text-align: right;
 }
@@ -112,6 +112,7 @@ nav {
 	color: var(--black);
 	padding: 1.2rem 3rem;
 }
+
 .nav-link:hover,
 .nav-link:focus {
 	outline: none;
@@ -138,9 +139,55 @@ nav {
 	.menu-toggle {
 		display: none;
 	}
+	nav {
+		align-items: center;
+	}
 	.primary-navigation {
+		outline: 1px solid red;
+		transform: translateX(0%);
+		background: transparent;
 		position: relative;
-		inset: 0 0 0 0;
+		padding: unset;
+		overflow: unset;
+		flex-direction: row;
+		left: 0;
+		--gap: 2.6rem;
+	}
+	.nav-item {
+		text-align: center;
+	}
+
+	.nav-link {
+		font-weight: 450;
+		width: 13rem;
+	}
+
+	.nav-link:hover,
+	.nav-link:focus {
+		background: transparent;
+	}
+	.nav-link::after,
+	.nav-link::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-radius: 10px 10px 0 0;
+		background: var(--black);
+		width: 100%;
+		height: 0.125rem;
+		transform: scaleX(0%);
+		transform-origin: left;
+		transition: transform 200ms ease;
+	}
+	/* .primary-navigation {
+		width: max-content;
+		justify-content: space-evenly;
+		align-items: center;
+		outline: 1px solid black;
+		position: relative;
+		overflow: unset;
+		left: 0;
 		background: transparent;
 		flex-direction: row;
 		transform: translateX(0%);
@@ -148,16 +195,19 @@ nav {
 		--gap: 2.6rem;
 	}
 	.nav-item {
-		flex: 1 0;
-		min-width: fit-content;
+		text-align: center;
+		outline: 1px solid red;
+		width: 10rem;
 	}
-	.nav-link:hover .nav-link::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: var(--black);
-		width: 100%;
-		height: 0.25rem;
+	.nav-link {
+		padding: unset;
+		/*removing padding nesscessay in mobile view*/
+	/* }  */
+	/* .nav-link:hover,
+	.nav-link:focus {
+	} */
+	.nav-link:hover::after,
+	.nav-link:focus::after {
+		transform: scaleX(100%);
 	}
 }
