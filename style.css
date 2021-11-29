@@ -143,7 +143,6 @@ nav {
 		align-items: center;
 	}
 	.primary-navigation {
-		outline: 1px solid red;
 		transform: translateX(0%);
 		background: transparent;
 		position: relative;
@@ -180,32 +179,7 @@ nav {
 		transform-origin: left;
 		transition: transform 200ms ease;
 	}
-	/* .primary-navigation {
-		width: max-content;
-		justify-content: space-evenly;
-		align-items: center;
-		outline: 1px solid black;
-		position: relative;
-		overflow: unset;
-		left: 0;
-		background: transparent;
-		flex-direction: row;
-		transform: translateX(0%);
-		padding: unset;
-		--gap: 2.6rem;
-	}
-	.nav-item {
-		text-align: center;
-		outline: 1px solid red;
-		width: 10rem;
-	}
-	.nav-link {
-		padding: unset;
-		/*removing padding nesscessay in mobile view*/
-	/* }  */
-	/* .nav-link:hover,
-	.nav-link:focus {
-	} */
+
 	.nav-link:hover::after,
 	.nav-link:focus::after {
 		transform: scaleX(100%);
