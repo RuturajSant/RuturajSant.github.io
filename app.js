@@ -1,5 +1,6 @@
 const primaryNav = document.querySelector(".primary-navigation");
 const toggle = document.querySelector(".menu-toggle");
+const navbar = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".primary-navigation .nav-link");
 const body = document.querySelector("body");
 
@@ -24,10 +25,12 @@ navLinks.forEach(navLink => {
 	});
 });
 
-handleScroll = () => {
-	if (body.classList.contains("on-scrollbar") === false) {
-		body.classList.add("on-scrollbar");
+window.onscroll = () => {
+	// let specs = window.scrollY;
+	// console.log(specs);
+	if (window.scrollY > 90) {
+		navbar.classList.add("head-active");
+	} else {
+		navbar.classList.remove("head-active");
 	}
 };
-
-window.addEventListener("scroll", handleScroll, true);
