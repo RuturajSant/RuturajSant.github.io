@@ -37,23 +37,25 @@ header {
 	top: 0;
 	z-index: 999;
 	background: var(--light);
-	box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.65);
-	-webkit-box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.65);
-	-moz-box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.65);
+	box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.7);
+	-webkit-box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.7);
+	-moz-box-shadow: 0px 2px 25px 0px rgba(23, 22, 22, 0.7);
 }
 main {
-	padding-block: 3rem;
+	padding-block: 0 3rem;
 }
 
 footer {
+	font-size: 1rem;
+	font-weight: 400;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	padding: 1.5rem 0.2rem;
 	width: 100%;
-	background: var(--dark);
-	color: var(--light);
+	background: var(--light);
+	color: var(--dark);
 }
 
 /* nav styles */
@@ -180,7 +182,7 @@ img {
 		left: 70%;
 	}
 }
-@media (min-width: 1230px) {
+@media (min-width: 1024px) {
 	/* big screens size  */
 	.menu-toggle {
 		display: none;
@@ -196,6 +198,7 @@ img {
 		padding: unset;
 		flex-direction: row;
 		left: 0;
+		--gap: 0.5rem;
 	}
 	.nav-item {
 		text-align: center;
@@ -203,9 +206,9 @@ img {
 
 	.nav-link {
 		color: var(--dark);
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: 450;
-		width: 10rem;
+		width: 8rem;
 		padding: 1.2rem 1rem;
 	}
 
@@ -295,13 +298,26 @@ html::-webkit-scrollbar-thumb {
 }
 
 section {
+	font-size: 2rem;
 	position: relative;
-	background: var(--dark);
 	height: 900px; /* temporary */
-	width: 90vw;
-	--bottom: 4rem;
-	border-radius: 1rem;
-	box-shadow: -4px 4px 25px 0px rgba(23, 22, 22, 0.65);
+	width: 100%;
+	/* --bottom: 4rem; */
+	/* border-radius: 1rem; */
+	/* box-shadow: -4px 4px 25px 0px rgba(23, 22, 22, 0.65);
 	-webkit-box-shadow: -4px 4px 25px 0px rgba(23, 22, 22, 0.65);
-	-moz-box-shadow: -4px 4px 25px 0px rgba(23, 22, 22, 0.65);
+	-moz-box-shadow: -4px 4px 25px 0px rgba(23, 22, 22, 0.65); */
+}
+section:nth-child(odd) {
+	background: var(--dark);
+	color: var(--light);
+}
+section:nth-child(even) {
+	background: var(--light);
+	color: var(--dark);
+}
+.container {
+	padding: 2rem;
+	width: 90vw;
+	height: 800px; /* temporary */
 }
