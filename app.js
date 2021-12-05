@@ -26,9 +26,9 @@ navLinks.forEach(navLink => {
 });
 
 window.onscroll = () => {
-	// let specs = window.scrollY;
-	// console.log(specs);
-	if (window.scrollY > 90) {
+	let specs = window.scrollY;
+	console.log(specs);
+	if (window.scrollY > 1080) {
 		navbar.classList.add("head-active");
 	} else {
 		navbar.classList.remove("head-active");
