@@ -20,6 +20,10 @@
 	display: flex;
 	gap: var(--gap, 1rem);
 }
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
 .center {
 	text-align: center;
 	margin: var(--top, 0) auto var(--bottom, 0);
@@ -36,7 +40,7 @@
 	font-size: 1rem;
 	font-weight: 400;
 }
-@media (min-width: 425px) {
+@media (min-width: 1024px) {
 	.title {
 		font-size: 3.75rem;
 		font-weight: 600;
@@ -92,7 +96,7 @@ nav {
 
 /* logo styles */
 .logo {
-	width: 160px;
+	width: clamp(80px, 35vw, 160px);
 	z-index: 100;
 }
 img {
@@ -150,7 +154,6 @@ img {
 	position: fixed;
 	overflow-x: hidden;
 	inset: 0 0 0 0;
-	/* z-index: ; */
 	background: hsla(283, 9%, 16%, 0.5);
 	transform: translateX(100%);
 	transition: transform 500ms ease;
@@ -176,6 +179,7 @@ img {
 
 /* a tag inside */
 .nav-link {
+	font-size: 1.25rem;
 	position: relative;
 	display: block;
 	cursor: pointer;
@@ -188,6 +192,168 @@ img {
 	outline: none;
 	border: none;
 	background: rgba(54, 54, 54, 0.15);
+}
+
+section {
+	position: relative;
+	width: 100%;
+}
+section:nth-child(odd) {
+	background-color: var(--dark);
+	color: var(--light);
+}
+section:nth-child(odd)::after {
+	content: "";
+	position: absolute;
+	inset: 0 0 0 0;
+	opacity: 0.15;
+	background-image: url(images/double-bubble-dark.png);
+	background-repeat: repeat;
+}
+section:nth-child(even) {
+	background: var(--light);
+	color: var(--dark);
+}
+section:nth-child(even)::after {
+	content: "";
+	position: absolute;
+	inset: 0 0 0 0;
+	opacity: 0.5;
+	background-image: url(images/webb.png);
+	background-repeat: repeat;
+}
+.container {
+	padding-block: 8rem 4rem;
+	position: relative;
+	z-index: 1;
+	width: min(90%, 80em);
+}
+
+/* home section styles */
+.hero {
+	margin-top: 2rem;
+	width: 100%;
+	--gap: 0.5rem;
+	grid-template-columns: repeat(5, fit-content(500px));
+	grid-template-rows: repeat(4, auto);
+	justify-items: center;
+	justify-content: center;
+	grid-template-areas:
+		". . hero . ."
+		". hi hero icons ."
+		". name name name ."
+		"post post post post post ";
+}
+.hero-img {
+	grid-area: hero;
+	width: 7.5rem;
+	aspect-ratio: 1;
+}
+.name {
+	grid-area: name;
+	width: max-content;
+	padding-inline: 0.8rem;
+	font-size: 1.875rem;
+	font-weight: 700;
+	background: var(--dark);
+}
+.post {
+	position: relative;
+	grid-area: post;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--dark);
+	background: var(--accent-green);
+	padding-inline: 2rem;
+	padding-block: 0.8rem;
+}
+.post::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	inset: -25px -12px -25px -12px;
+	border: 2px solid var(--accent-green);
+}
+.icon-group {
+	grid-area: icons;
+	flex-direction: column;
+	--gap: 0.5rem;
+	background: var(--dark);
+}
+.icon {
+	max-width: 1rem;
+}
+.hero .subtitle {
+	grid-area: hi;
+	max-width: 3rem;
+}
+.caret {
+	display: block;
+	width: 1.2rem;
+	margin-top: 2.2rem;
+	transition: transform 200ms ease;
+}
+.caret:hover,
+.caret:focus {
+	transform: scale(1.2);
+}
+@media (min-width: 1024px) {
+	.hero {
+		--gap: 1.2rem;
+		row-gap: 0rem;
+		grid-template-areas:
+			". hero hi . ."
+			". hero name name ."
+			". hero post post post"
+			". hero icons . .";
+		justify-items: stretch;
+		align-items: center;
+	}
+	.hero .subtitle {
+		align-self: end;
+		max-width: max-content;
+	}
+	.icon-group {
+		width: max-content;
+	}
+	.hero-img {
+		width: 21.25rem;
+		aspect-ratio: 1;
+	}
+	.name {
+		font-size: 4.375rem;
+		font-weight: 700;
+	}
+	.post {
+		z-index: -1;
+		align-self: stretch;
+		text-align: right;
+		line-height: 2rem;
+		grid-area: 3 / 1 / 4 / 6;
+		font-size: 1.25rem;
+		font-weight: 500;
+		padding-inline: 10rem;
+		padding-block: 1.5rem 0;
+	}
+	.post::before {
+		inset: -60px -15px -40px -15px;
+	}
+	.icon-group {
+		--gap: 2rem;
+		flex-direction: row;
+	}
+	.icon {
+		opacity: 0.6;
+		max-width: 2.5rem;
+		transition: opacity 200ms ease;
+	}
+	.icon:hover,
+	.icon:focus {
+		opacity: 1;
+	}
+	.caret {
+		width: 2.5rem;
+	}
 }
 
 /* media queries */
@@ -301,42 +467,4 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
 	border-radius: 6px;
 	background-color: var(--dark);
-}
-
-section {
-	position: relative;
-	height: 900px; /* temporary */
-	width: 100%;
-	/* padding: 8rem 2rem 2rem; */
-}
-section:nth-child(odd) {
-	background-color: var(--dark);
-	color: var(--light);
-}
-section:nth-child(odd)::after {
-	content: "";
-	position: absolute;
-	inset: 0 0 0 0;
-	opacity: 0.15;
-	background-image: url(images/double-bubble-dark.png);
-	background-repeat: repeat;
-}
-section:nth-child(even) {
-	background: var(--light);
-	color: var(--dark);
-}
-section:nth-child(even)::after {
-	content: "";
-	position: absolute;
-	inset: 0 0 0 0;
-	opacity: 0.5;
-	background-image: url(images/webb.png);
-	background-repeat: repeat;
-}
-.container {
-	padding: 8rem 2rem 2rem;
-	position: relative;
-	z-index: 1;
-	max-width: 64rem;
-	height: 100%; /* temporary */
 }
