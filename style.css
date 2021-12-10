@@ -14,7 +14,12 @@
 	list-style: none;
 	text-decoration: none;
 }
-
+p,
+h1,
+h2,
+h3 {
+	margin-block: 0.2em 0.4em;
+}
 /* utility classes */
 .flex {
 	display: flex;
@@ -246,6 +251,12 @@ section:nth-child(even)::after {
 		". name name name ."
 		"post post post post post ";
 }
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p {
+	margin-block: 0 0;
+}
 .hero-img {
 	grid-area: hero;
 	width: 7.5rem;
@@ -292,7 +303,7 @@ section:nth-child(even)::after {
 .caret {
 	display: block;
 	width: 1.2rem;
-	margin-top: 2.2rem;
+	margin-top: 3.3rem;
 	transition: transform 200ms ease;
 }
 .caret:hover,
@@ -338,7 +349,7 @@ section:nth-child(even)::after {
 		padding-block: 1.5rem 0;
 	}
 	.post::before {
-		inset: -60px -15px -40px -15px;
+		inset: -50px -15px -50px -15px;
 		border: 4px solid var(--accent-green);
 	}
 	.icon-group {
@@ -359,6 +370,31 @@ section:nth-child(even)::after {
 	}
 }
 
+/* services styles */
+#services .title {
+	position: relative;
+	margin-bottom: 2.5rem;
+}
+#services .subtitle {
+	width: 100%;
+}
+#services .title::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -1.2rem;
+	transform: translate(-50%);
+	width: 10rem;
+	height: 4px;
+	background: var(--accent-green);
+}
+.service-container {
+	flex-wrap: wrap;
+	--gap: 2rem;
+}
+.content {
+	width: clamp(12rem, 20vw, 28rem);
+}
 /* media queries */
 @media (min-width: 425px) {
 	.primary-navigation {
