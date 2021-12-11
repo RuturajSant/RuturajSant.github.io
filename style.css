@@ -398,6 +398,10 @@ section:nth-child(even)::after {
 .content {
 	width: clamp(12rem, 20vw, 28rem);
 }
+.content a {
+	color: var(--accent-green);
+	font-weight: 500;
+}
 
 /* aboutme styles */
 .about-image {
