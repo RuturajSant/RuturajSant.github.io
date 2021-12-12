@@ -45,6 +45,14 @@ h3 {
 	font-size: 1rem;
 	font-weight: 400;
 }
+.button {
+	background: var(--accent-green);
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
 @media (min-width: 1024px) {
 	.title {
 		font-size: 3.75rem;

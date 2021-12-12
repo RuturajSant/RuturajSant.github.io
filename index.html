@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>My landing page</title>
-		<link rel="stylesheet" href="globalstyle.css">
+		<link rel="stylesheet" href="globalstyle.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
@@ -146,54 +146,63 @@
 					<p class="caption">A collection of some of my work</p>
 					<div class="card-container">
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-1.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-2.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-3.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-4.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-5.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 						<div class="card">
-							<img src="" alt="" />
+							<img src="images/work/work-6.png" alt="" />
 							<p class="subtitle"></p>
 							<p class="text"></p>
 						</div>
 					</div>
+					<a class="button" href="#">See More</a>
 				</div>
 			</section>
 			<section id="contact">
-				<div class="container">
+				<div class="container center">
 					<div class="social-container">
 						<h2 class="title">
 							Contact Me!
 						</h2>
-						<div class="contact-icon">
-							<img src="images/ic_outline-smartphone.svg" alt="Phone number" />
+						<div class="contact-container center flex">
+							<div class="contact-icon">
+								<img src="images/ic_outline-smartphone.svg" alt="Phone number" />
+							</div>
+							<div class="contact-text"><p>+91 - 9766889123</p></div>
 						</div>
-						<div class="contact-text">+91 - 9766889123</div>
-						<div class="contact-icon">
-							<img src="images/mdi_gmail.svg" alt="Email" />
+						<div class="contact-container center flex">
+							<div class="contact-icon">
+								<img src="images/mdi_gmail.svg" alt="Email" />
+							</div>
+							<div class="contact-text">
+								<p>
+									sant.ruturaj2001@gmail.com
+								</p>
+							</div>
 						</div>
-						<div class="contact-text">sant.ruturaj2001@gmail.com</div>
 						<p class="social subtitle">Social</p>
-						<div class="icon-group flex">
+						<div class="work-icons flex">
 							<a href="#" class="icon"
 								><img src="images/akar-icons_instagram-fill.svg" alt="instagram"
 							/></a>
@@ -212,53 +221,22 @@
 						<p class="form-text">
 							Or you can directly contact me by filling this form too
 						</p>
-						<form action="">
-							<label for="fname">Full name</label><br />
-							<input
-								type="text"
-								id="fname"
-								name="fname"
-								placeholder="Your name"
-								value=""
-							/><br />
-
-							<label for="email">Email</label><br />
-							<input
-								type="text"
-								id="email"
-								name="email"
-								placeholder="Email"
-								value=""
-							/><br />
-
-							<label for="phone">Ph no.</label><br />
-							<input
-								type="text"
-								id="phone"
-								name="phone"
-								placeholder="Phone Number"
-								value=""
-							/><br />
-
-							<label for="subject">Subject</label><br />
-							<input
-								type="text"
-								id="subject"
-								name="subject"
-								placeholder="Subject of your message"
-								value=""
-							/><br />
-
-							<label for="email">Your Message</label><br />
-							<input
-								type="text"
-								id="message"
+						<form
+							action="https://formsubmit.co/sant.ruturaj2001@gmail.com"
+							method="POST"
+						>
+							<input type="text" placeholder="Full Name" name="name" required /><br />
+							<input type="email" placeholder="Email" name="email" required /><br />
+							<input type="text" placeholder="Phone Number" name="phone" /><br />
+							<input type="text" placeholder="Subject" name="_subject" /><br />
+							<textarea
+								placeholder="Your Message"
 								name="message"
-								placeholder="Your message"
-								value=""
-							/><br /><br />
-
-							<input type="submit" value="Submit" />
+								rows="10"
+								required
+							></textarea
+							><br />
+							<button class="button" type="submit">Send</button>
 						</form>
 					</div>
 				</div>
