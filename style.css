@@ -306,7 +306,7 @@ section:nth-child(even)::after {
 	border: none;
 	outline: none;
 	width: min(100%, 30rem);
-	padding: 0.6rem 0.3rem;
+	padding: 0.6rem 0.6rem;
 	margin-bottom: 1rem;
 	border-radius: 8px;
 }
@@ -325,6 +325,7 @@ section:nth-child(even)::after {
 	}
 	.contact-container {
 		justify-content: flex-start;
+		align-items: center;
 		margin-block: 3rem;
 	}
 	.work-icons {
@@ -335,7 +336,7 @@ section:nth-child(even)::after {
 		right: 0%;
 		left: 100%;
 		top: 0;
-		height: 105%;
+		height: 120%;
 		width: 4px;
 	}
 	.contact-icon {
