@@ -248,25 +248,77 @@ section:nth-child(even)::after {
 }
 
 /* work styles */
-
+#work .title {
+	position: relative;
+	margin-bottom: 2.5rem;
+}
+#work .title::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -1.2rem;
+	transform: translate(-50%);
+	width: 10rem;
+	height: 4px;
+	background: var(--accent-green);
+}
+#work .button {
+	text-decoration: none;
+	color: var(--dark);
+	padding: 0.6rem 0.8rem;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+}
+.card-container {
+	width: min(100%, 70em);
+	margin-block: 2rem 4rem;
+	justify-content: center;
+	--gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, min(17.2rem, 86vw));
+}
 .card-container .card {
+	position: relative;
 	border-radius: 0.8rem;
 	overflow: hidden;
 	width: 17.25rem;
-	aspect-ratio: 3 / 4;
+	aspect-ratio: 4 / 5;
+	background: var(--dark);
 	box-shadow: 10px 10px 10px 0px rgba(42, 37, 44, 0.5);
 	-webkit-box-shadow: 10px 10px 10px 0px rgba(42, 37, 44, 0.5);
 	-moz-box-shadow: 10px 10px 10px 0px rgba(42, 37, 44, 0.5);
 	transition: 500ms ease;
 }
-
+.card p {
+	width: 90%;
+	color: var(--light);
+	position: absolute;
+	left: 1rem;
+	text-align: left;
+	z-index: 1;
+	transition: 500ms ease;
+}
+.card .subtitle {
+	bottom: 0;
+}
+.card .text {
+	bottom: -100%;
+}
+.card:hover .subtitle {
+	bottom: 4.5rem;
+}
+.card:hover .text {
+	bottom: 1rem;
+}
 .card-container .card:hover {
-	box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.5);
-	-webkit-box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.5);
-	-moz-box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.5);
+	box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.4);
+	-webkit-box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.4);
+	-moz-box-shadow: 10px 10px 20px 5px rgba(42, 37, 44, 0.4);
 }
 .card-container .card img {
+	position: absolute;
+	top: 0;
 	object-fit: cover;
+	opacity: 0.6;
 }
 
 /* contact styles */
