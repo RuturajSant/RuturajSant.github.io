@@ -387,7 +387,7 @@ section:nth-child(even)::after {
 	}
 	.work-icons {
 		justify-content: flex-start;
-		margin-block: 3rem;
+		margin-block: 3rem 6rem;
 	}
 	.social-container::after {
 		right: 0%;
