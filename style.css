@@ -299,17 +299,20 @@ section:nth-child(even)::after {
 }
 .card .subtitle {
 	font-size: 2rem;
-	bottom: 0%;
+	left: -0%;
+	top: 4%;
 	background: var(--accent-green);
+	border-radius: 0 0.8rem 0.8rem 0;
 }
 .card .text {
-	bottom: -100%;
+	left: -100%;
+	top: 35%;
 }
 .card:hover .subtitle {
-	bottom: 40%;
+	left: 0%;
 }
 .card:hover .text {
-	bottom: 0.8rem;
+	left: 0%;
 }
 .card:hover img {
 	opacity: 0.4;
