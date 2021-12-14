@@ -66,7 +66,7 @@ section:nth-child(even)::after {
 }
 .name {
 	grid-area: name;
-	width: max-content;
+	width: 100%;
 	padding-inline: 0.8rem;
 	font-size: 1.875rem;
 	font-weight: 700;
