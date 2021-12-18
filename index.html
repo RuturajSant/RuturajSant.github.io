@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 		<title>RS.dev</title>
+		<link rel="stylesheet" href="node_modules\aos\dist\aos.css" />
 		<link rel="stylesheet" href="globalstyle.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
@@ -62,23 +63,55 @@
 						</div>
 						<p class="subtitle">Hi,I am</p>
 						<h2 class="name">Ruturaj Sant</h2>
-						<p class="post">front-end dev and UI/UX designer</p>
-						<div class="icon-group flex">
-							<a target="_blank" href="sant.ruturaj2001@gmail.com" class="icon"
+						<p
+							data-aos="fade-right"
+							data-aos-delay="500"
+							data-aos-anchor-placement="top-bottom"
+							class="post"
+						>
+							front-end dev and UI/UX designer
+						</p>
+						<div
+							data-aos="fade"
+							data-aos-delay="500"
+							data-aos-anchor-placement="top-bottom"
+							class="icon-group flex"
+						>
+							<a
+								data-aos="fade"
+								data-aos-delay="600"
+								data-aos-anchor-placement="top-bottom"
+								target="_blank"
+								href="sant.ruturaj2001@gmail.com"
+								class="icon"
 								><img src="images/mdi_gmail.svg" alt="gmail"
 							/></a>
 							<a
+								data-aos="fade"
+								data-aos-delay="700"
+								data-aos-anchor-placement="top-bottom"
 								target="_blank"
 								href="https://www.instagram.com/ruturaj_sant/"
 								class="icon"
 								><img src="images/akar-icons_instagram-fill.svg" alt="instagram"
 							/></a>
-							<a target="_blank" href="https://github.com/RuturajSant" class="icon"
+							<a
+								data-aos="fade"
+								data-aos-delay="800"
+								data-aos-anchor-placement="top-bottom"
+								target="_blank"
+								href="https://github.com/RuturajSant"
+								class="icon"
 								><img src="images/akar-icons_github-fill.svg" alt="github"
 							/></a>
 						</div>
 					</div>
-					<a class="caret center" href="#services"
+					<a
+						data-aos="fade-down"
+						data-aos-delay="800"
+						data-aos-anchor-placement="top-bottom"
+						class="caret center"
+						href="#services"
 						><img src="images/ph_caret-down-bold.svg" alt="go down"
 					/></a>
 				</div>
@@ -89,7 +122,7 @@
 						What I do
 					</h2>
 					<div class="service-container flex">
-						<div class="content center">
+						<div data-aos="fade-up" class="content center">
 							<p class="subtitle">Web Dev</p>
 							<p class="text">
 								Proficient in HTML,CSS,JS and using React framework.I am also able to
@@ -98,7 +131,7 @@
 								UI and using new tools in web dev.
 							</p>
 						</div>
-						<div class="content center">
+						<div data-aos="fade-up" data-aos-delay="400" class="content center">
 							<p class="subtitle">Graphic Design</p>
 							<p class="text">
 								Taking up designing as an interest, I'm skilled in making logos,
@@ -107,7 +140,7 @@
 								designs for websites and skilled in Photoshop,Figma & Illustrator
 							</p>
 						</div>
-						<div class="content center">
+						<div data-aos="fade-up" data-aos-delay="800" class="content center">
 							<p class="subtitle">Digital Art</p>
 							<p class="text">
 								I always like drawing from childhood, I like doing digital art as a
@@ -278,5 +311,18 @@
 			</p>
 		</footer>
 		<script src="app.js"></script>
+		<script src="node_modules\aos\dist\aos.js"></script>
+		<script>
+			AOS.init({
+				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+				offset: 120, // offset (in px) from the original trigger point
+				delay: 0, // values from 0 to 3000, with step 50ms
+				duration: 400, // values from 0 to 3000, with step 50ms
+				easing: "ease", // default easing for AOS animations
+				once: true, // whether animation should happen only once - while scrolling down
+				mirror: false, // whether elements should animate out while scrolling past them
+				anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
+			});
+		</script>
 	</body>
 </html>

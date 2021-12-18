@@ -5,7 +5,6 @@ const sections = document.querySelectorAll("section");
 const loader = document.querySelector(".loader");
 
 window.addEventListener("load", () => {
-	console.log("hi");
 	loader.classList.add("remove-loader");
 });
 // toggle menu
