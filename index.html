@@ -1,385 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-		<title>RS.dev</title>
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-		<link rel="stylesheet" href="globalstyle.css" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="loader">
-			<img src="images/preloader.svg" alt="LOADING" />
-		</div>
-		<header>
-			<nav class="flex">
-				<a href="index.html" class="logo">
-					<img src="images/rsdev.png" alt="Logo" />
-				</a>
-				<ul
-					id="primary-navigation"
-					class="primary-navigation flex"
-					data-visible="false"
-				>
-					<li class="nav-item">
-						<a
-							data-page="home"
-							data-aos="fade-left"
-							data-aos-anchor-placement="top-bottom"
-							data-aos-delay="800"
-							class="nav-link text active"
-							href="#home"
-							>Home</a
-						>
-					</li>
-					<li class="nav-item">
-						<a
-							data-page="services"
-							data-aos="fade-left"
-							data-aos-anchor-placement="top-bottom"
-							data-aos-delay="600"
-							class="nav-link text"
-							href="#services"
-							>My services</a
-						>
-					</li>
-					<li class="nav-item">
-						<a
-							data-page="about"
-							data-aos="fade-left"
-							data-aos-anchor-placement="top-bottom"
-							data-aos-delay="400"
-							class="nav-link text"
-							href="#about"
-							>About me</a
-						>
-					</li>
-					<li class="nav-item">
-						<a
-							data-page="work"
-							data-aos="fade-left"
-							data-aos-anchor-placement="top-bottom"
-							data-aos-delay="200"
-							class="nav-link text"
-							href="#work"
-							>My work</a
-						>
-					</li>
-					<li class="nav-item">
-						<a
-							data-page="contact"
-							data-aos="fade-left"
-							data-aos-anchor-placement="top-bottom"
-							class="nav-link text"
-							href="#contact"
-							>Contact</a
-						>
-					</li>
-				</ul>
-				<div
-					aria-expanded="false"
-					aria-controls="primary-navigation"
-					class="menu-toggle"
-				>
-					<span class="hamburger"></span>
-					<span class="hamburger"></span>
-					<span class="hamburger"></span>
-				</div>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <title>RS.dev</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="globalstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <img style="width: 150px" src="images/loader_tag.gif" alt="LOADING" />
+    </div>
+    <header>
+      <nav class="flex">
+        <a href="index.html" class="logo">
+          <img src="images/rsdev.png" alt="Logo" />
+        </a>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation flex"
+          data-visible="false"
+        >
+          <li class="nav-item">
+            <a
+              data-page="home"
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="800"
+              class="nav-link text active"
+              href="#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-page="services"
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="600"
+              class="nav-link text"
+              href="#services"
+              >My services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-page="about"
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="400"
+              class="nav-link text"
+              href="#about"
+              >About me</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-page="work"
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="200"
+              class="nav-link text"
+              href="#work"
+              >My work</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-page="contact"
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              class="nav-link text"
+              href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          class="menu-toggle"
+        >
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </div>
+      </nav>
+    </header>
 
-		<main>
-			<section id="home">
-				<div class="container center">
-					<div class="hero grid">
-						<div class="hero-img">
-							<img src="images/hpic.png" alt="Pic of Ruturaj Sant" />
-						</div>
-						<p class="subtitle">Hi,I am</p>
-						<h2 class="name">
-							Ruturaj Sant
-						</h2>
-						<p
-							data-aos="fade-right"
-							data-aos-delay="300"
-							data-aos-anchor-placement="top-bottom"
-							class="post"
-						>
-							front-end dev and UI/UX designer
-						</p>
-						<div
-							data-aos="fade"
-							data-aos-delay="500"
-							data-aos-anchor-placement="top-bottom"
-							class="icon-group flex"
-						>
-							<a
-								data-aos="fade"
-								data-aos-delay="600"
-								data-aos-anchor-placement="top-bottom"
-								target="_blank"
-								href="sant.ruturaj2001@gmail.com"
-								class="icon"
-								><img src="images/mdi_gmail.svg" alt="gmail"
-							/></a>
-							<a
-								data-aos="fade"
-								data-aos-delay="700"
-								data-aos-anchor-placement="top-bottom"
-								target="_blank"
-								href="https://www.instagram.com/ruturaj_sant/"
-								class="icon"
-								><img src="images/akar-icons_instagram-fill.svg" alt="instagram"
-							/></a>
-							<a
-								data-aos="fade"
-								data-aos-delay="800"
-								data-aos-anchor-placement="top-bottom"
-								target="_blank"
-								href="https://github.com/RuturajSant"
-								class="icon"
-								><img src="images/akar-icons_github-fill.svg" alt="github"
-							/></a>
-						</div>
-					</div>
-					<a
-						data-aos="fade-down"
-						data-aos-delay="800"
-						data-aos-anchor-placement="top-bottom"
-						class="caret center"
-						href="#services"
-						><img src="images/ph_caret-down-bold.svg" alt="go down"
-					/></a>
-				</div>
-			</section>
-			<section id="services">
-				<div class="container center">
-					<h2 class="title">
-						What I do
-					</h2>
-					<div class="service-container flex">
-						<div data-aos="fade-up" class="content center">
-							<p class="subtitle">Web Dev</p>
-							<p class="text">
-								Proficient in HTML,CSS,JS and using React framework.I am also able to
-								work on backend with PHP and Django.I am able manage SQL and NoSQL
-								databases.I'm always looking foward in creating unique designs for cool
-								UI and using new tools in web dev.
-							</p>
-						</div>
-						<div data-aos="fade-up" data-aos-delay="300" class="content center">
-							<p class="subtitle">Graphic Design</p>
-							<p class="text">
-								Taking up designing as an interest, I'm skilled in making logos,
-								posters, cards for campaigns,adverts, and social events and anything
-								that comes in between.Along with graphic designing, I'm able to develop
-								designs for websites and skilled in Photoshop,Figma & Illustrator
-							</p>
-						</div>
-						<div data-aos="fade-up" data-aos-delay="600" class="content center">
-							<p class="subtitle">Digital Art</p>
-							<p class="text">
-								I always like drawing from childhood, I like doing digital art as a
-								hobby.I mostly make scenic art and sketches.You can check out some of my
-								work
-								<a target="_blank" href="https://www.instagram.com/rs._.arts/">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="about">
-				<div class="container center">
-					<h2 class="title">
-						About me
-					</h2>
-					<div class="about-image center">
-						<img src="images/pic-2.png" alt="Image of me" />
-					</div>
-					<p
-						data-aos="fade-right"
-						data-aos-anchor-placement="top-bottom"
-						class="about-content center text"
-					>
-						Hello everyone!! Im a web developer based in Nagpur,Maharastra.I learned
-						web dev during the pandemic and was instantly in love with building cool
-						and unique websites.
-						<br /><br />
-						Designing has always been a favourite.I thoroughly enjoy designing
-						websites, logos or poster.Collaborating on a project is a real treat, so
-						if you have a project in mind,I’d love to hear from you.
-						<br /><br />
-						Currently Im a student and doing web dev part time, but I hope to build
-						career in this field as a full stack MERN developer, and have already
-						started learning the backend services like MongoDb & Express. I hope to
-						get proficiency in these things soon!!
-						<br /><br />
-						When not working alongside clients, I enjoy spending time on personal
-						projects, watching movies and anime.
-					</p>
-				</div>
-			</section>
-			<section id="work">
-				<div class="container center">
-					<h2 class="title">
-						My work
-					</h2>
-					<p class="caption">A collection of some of my work</p>
-					<div class="grid center card-container">
-						<div
-							data-aos="fade-in"
-							data-aos-anchor-placement="top-bottom"
-							class="card"
-						>
-							<p class="subtitle">Flex Gallery</p>
-							<p class="text">A gallery with awesome hover effect using flex.</p>
-							<img src="images/work/work-1.png" alt="" />
-						</div>
-						<div data-aos="fade-in"
-						data-aos-delay="100"
-						data-aos-anchor-placement="top-bottom" class="card">
-							<p class="subtitle">A chat app</p>
-							<p class="text">
-								A chat app build with React and firebase's realtime database.
-							</p>
-							<img src="images/work/work-2.png" alt="" />
-						</div>
-						<div data-aos="fade-in"
-						data-aos-delay="200"
-						data-aos-anchor-placement="top-bottom" class="card">
-							<p class="subtitle">Animated Form</p>
-							<p class="text">Sign up/in form made with grid and animation.</p>
-							<img src="images/work/work-3.png" alt="" />
-						</div>
-						<div data-aos="fade-in"
-						data-aos-delay="300"
-						data-aos-anchor-placement="top-bottom" class="card">
-							<p class="subtitle">E-commerce Website</p>
-							<p class="text">
-								A fully functioning e-commerce website using PHP and Sql as backend
-							</p>
-							<img src="images/work/work-4.png" alt="" />
-						</div>
-						<div data-aos="fade-in"
-						data-aos-delay="400"
-						data-aos-anchor-placement="top-bottom" class="card">
-							<p class="subtitle">Grid Gallery</p>
-							<p class="text">A fully responsive gallery made using Grid layout</p>
-							<img src="images/work/work-5.png" alt="" />
-						</div>
-						<div data-aos="fade-in"
-						data-aos-delay="500"
-						data-aos-anchor-placement="top-bottom" class="card">
-							<p class="subtitle">Side Navbar</p>
-							<p class="text">
-								A sidebar inspired by Discord with cool hover effects.
-							</p>
-							<img src="images/work/work-6.png" alt="" />
-						</div>
-					</div>
-					<a target="_blank" class="button" href="https://codepen.io/ruturaj-sant"
-						>See More</a
-					>
-				</div>
-			</section>
-			<section id="contact">
-				<div class="container center">
-					<div class="social-container">
-						<h2 class="title">
-							Contact Me!
-						</h2>
-						<div class="contact-container center flex">
-							<div class="contact-icon">
-								<img src="images/ic_outline-smartphone.svg" alt="Phone number" />
-							</div>
-							<div class="contact-text"><p class="text">+91 - 9766889123</p></div>
-						</div>
-						<div class="contact-container center flex">
-							<div class="contact-icon">
-								<img src="images/mdi_gmail.svg" alt="Email" />
-							</div>
-							<div class="contact-text">
-								<p class="text">
-									sant.ruturaj2001@gmail.com
-								</p>
-							</div>
-						</div>
-						<p class="social subtitle">Social</p>
-						<div class="work-icons flex">
-							<a
-								target="_blank"
-								href="https://www.instagram.com/ruturaj_sant/"
-								class="icon"
-								><img src="images/akar-icons_instagram-fill.svg" alt="instagram"
-							/></a>
-							<a target="_blank" href="https://codepen.io/ruturaj-sant" class="icon"
-								><img src="images/akar-icons_codepen-fill.svg" alt="codepen"
-							/></a>
-							<a
-								target="_blank"
-								href="https://www.linkedin.com/in/ruturaj-sant-834825194"
-								class="icon"
-								><img src="images/cib_linkedin.svg" alt="linkedin"
-							/></a>
-							<a target="_blank" href="https://github.com/RuturajSant" class="icon"
-								><img src="images/akar-icons_github-fill.svg" alt="github"
-							/></a>
-						</div>
-					</div>
-					<div class="form-container">
-						<p class="form-text">
-							Or you can directly contact me by filling this form too
-						</p>
-						<form
-							action="https://formsubmit.co/de0d4f0284034b7f461899a46c69f830"
-							method="POST"
-						>
-							<input type="text" name="_honey" style="display:none" />
-							<input type="hidden" name="_captcha" value="false" />
-							<input
-								type="hidden"
-								name="_next"
-								value="https://ruturajsant.github.io/RS.dev/success.html"
-							/>
-							<input type="text" placeholder="Full Name" name="name" required /><br />
-							<input type="email" placeholder="Email" name="email" required /><br />
-							<input type="text" placeholder="Phone Number" name="phone" /><br />
-							<input type="text" placeholder="Subject" name="_subject" /><br />
-							<textarea
-								placeholder="Your Message"
-								name="message"
-								rows="8"
-								required
-							></textarea
-							><br />
-							<button class="button" type="submit">Send</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<p class="center text">
-				&copy; All rights reserved with Ruturaj Sant &VerticalLine; Ph No.:
-				+91-9766889123 &VerticalLine; e-mail: sant.ruturaj2001@gmail.com
-			</p>
-		</footer>
-		<script src="app.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script>
-			AOS.init({
-				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-				offset: 120, // offset (in px) from the original trigger point
-				delay: 0, // values from 0 to 3000, with step 50ms
-				duration: 400, // values from 0 to 3000, with step 50ms
-				easing: "ease", // default easing for AOS animations
-				once: true, // whether animation should happen only once - while scrolling down
-				mirror: false, // whether elements should animate out while scrolling past them
-				anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
-			});
-		</script>
-	</body>
+    <main>
+      <section id="home">
+        <div class="container center">
+          <div class="hero grid">
+            <div class="hero-img">
+              <img src="images/hpic.png" alt="Pic of Ruturaj Sant" />
+            </div>
+            <p class="subtitle">Hi,I am</p>
+            <h2 class="name">Ruturaj Sant</h2>
+            <p
+              data-aos="fade-right"
+              data-aos-delay="300"
+              data-aos-anchor-placement="top-bottom"
+              class="post"
+            >
+              front-end dev and UI/UX designer
+            </p>
+            <div
+              data-aos="fade"
+              data-aos-delay="500"
+              data-aos-anchor-placement="top-bottom"
+              class="icon-group flex"
+            >
+              <a
+                data-aos="fade"
+                data-aos-delay="600"
+                data-aos-anchor-placement="top-bottom"
+                target="_blank"
+                href="sant.ruturaj2001@gmail.com"
+                class="icon"
+                ><img src="images/mdi_gmail.svg" alt="gmail"
+              /></a>
+              <a
+                data-aos="fade"
+                data-aos-delay="700"
+                data-aos-anchor-placement="top-bottom"
+                target="_blank"
+                href="https://www.instagram.com/ruturaj_sant/"
+                class="icon"
+                ><img
+                  src="images/akar-icons_instagram-fill.svg"
+                  alt="instagram"
+              /></a>
+              <a
+                data-aos="fade"
+                data-aos-delay="800"
+                data-aos-anchor-placement="top-bottom"
+                target="_blank"
+                href="https://github.com/RuturajSant"
+                class="icon"
+                ><img src="images/akar-icons_github-fill.svg" alt="github"
+              /></a>
+            </div>
+          </div>
+          <a
+            data-aos="fade-down"
+            data-aos-delay="800"
+            data-aos-anchor-placement="top-bottom"
+            class="caret center"
+            href="#services"
+            ><img src="images/ph_caret-down-bold.svg" alt="go down"
+          /></a>
+        </div>
+      </section>
+      <section id="services">
+        <div class="container center">
+          <h2 class="title">What I do</h2>
+          <div class="service-container flex">
+            <div data-aos="fade-up" class="content center">
+              <p class="subtitle">Web Dev</p>
+              <p class="text">
+                Proficient in HTML,CSS,JS and using React framework.I am also
+                able to work on backend with PHP and Django.I am able manage SQL
+                and NoSQL databases.I'm always looking foward in creating unique
+                designs for cool UI and using new tools in web dev.
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="content center">
+              <p class="subtitle">Graphic Design</p>
+              <p class="text">
+                Taking up designing as an interest, I'm skilled in making logos,
+                posters, cards for campaigns,adverts, and social events and
+                anything that comes in between.Along with graphic designing, I'm
+                able to develop designs for websites and skilled in
+                Photoshop,Figma & Illustrator
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="content center">
+              <p class="subtitle">Digital Art</p>
+              <p class="text">
+                I always like drawing from childhood, I like doing digital art
+                as a hobby.I mostly make scenic art and sketches.You can check
+                out some of my work
+                <a target="_blank" href="https://www.instagram.com/rs._.arts/"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container center">
+          <h2 class="title">About me</h2>
+          <div class="about-image center">
+            <img src="images/pic-2.png" alt="Image of me" />
+          </div>
+          <p
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-bottom"
+            class="about-content center text"
+          >
+            Hello everyone!! Im a web developer based in Nagpur,Maharastra.I
+            learned web dev during the pandemic and was instantly in love with
+            building cool and unique websites.
+            <br /><br />
+            Designing has always been a favourite.I thoroughly enjoy designing
+            websites, logos or poster.Collaborating on a project is a real
+            treat, so if you have a project in mind,I’d love to hear from you.
+            <br /><br />
+            Currently Im a student and doing web dev part time, but I hope to
+            build career in this field as a full stack MERN developer, and have
+            already started learning the backend services like MongoDb &
+            Express. I hope to get proficiency in these things soon!!
+            <br /><br />
+            When not working alongside clients, I enjoy spending time on
+            personal projects, watching movies and anime.
+          </p>
+        </div>
+      </section>
+      <section id="work">
+        <div class="container center">
+          <h2 class="title">My work</h2>
+          <p class="caption">A collection of some of my work</p>
+          <div class="grid center card-container">
+            <div
+              data-aos="fade-in"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">Flex Gallery</p>
+              <p class="text">
+                A gallery with awesome hover effect using flex.
+              </p>
+              <img src="images/work/work-1.png" alt="" />
+            </div>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="100"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">A chat app</p>
+              <p class="text">
+                A chat app build with React and firebase's realtime database.
+              </p>
+              <img src="images/work/work-2.png" alt="" />
+            </div>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="200"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">Animated Form</p>
+              <p class="text">Sign up/in form made with grid and animation.</p>
+              <img src="images/work/work-3.png" alt="" />
+            </div>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="300"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">E-commerce Website</p>
+              <p class="text">
+                A fully functioning e-commerce website using PHP and Sql as
+                backend
+              </p>
+              <img src="images/work/work-4.png" alt="" />
+            </div>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="400"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">Grid Gallery</p>
+              <p class="text">
+                A fully responsive gallery made using Grid layout
+              </p>
+              <img src="images/work/work-5.png" alt="" />
+            </div>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-anchor-placement="top-bottom"
+              class="card"
+            >
+              <p class="subtitle">Side Navbar</p>
+              <p class="text">
+                A sidebar inspired by Discord with cool hover effects.
+              </p>
+              <img src="images/work/work-6.png" alt="" />
+            </div>
+          </div>
+          <a
+            target="_blank"
+            class="button"
+            href="https://codepen.io/ruturaj-sant"
+            >See More</a
+          >
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container center">
+          <div class="social-container">
+            <h2 class="title">Contact Me!</h2>
+            <div class="contact-container center flex">
+              <div class="contact-icon">
+                <img
+                  src="images/ic_outline-smartphone.svg"
+                  alt="Phone number"
+                />
+              </div>
+              <div class="contact-text">
+                <p class="text">+91 - 9766889123</p>
+              </div>
+            </div>
+            <div class="contact-container center flex">
+              <div class="contact-icon">
+                <img src="images/mdi_gmail.svg" alt="Email" />
+              </div>
+              <div class="contact-text">
+                <p class="text">sant.ruturaj2001@gmail.com</p>
+              </div>
+            </div>
+            <p class="social subtitle">Social</p>
+            <div class="work-icons flex">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/ruturaj_sant/"
+                class="icon"
+                ><img
+                  src="images/akar-icons_instagram-fill.svg"
+                  alt="instagram"
+              /></a>
+              <a
+                target="_blank"
+                href="https://codepen.io/ruturaj-sant"
+                class="icon"
+                ><img src="images/akar-icons_codepen-fill.svg" alt="codepen"
+              /></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ruturaj-sant-834825194"
+                class="icon"
+                ><img src="images/cib_linkedin.svg" alt="linkedin"
+              /></a>
+              <a
+                target="_blank"
+                href="https://github.com/RuturajSant"
+                class="icon"
+                ><img src="images/akar-icons_github-fill.svg" alt="github"
+              /></a>
+            </div>
+          </div>
+          <div class="form-container">
+            <p class="form-text">
+              Or you can directly contact me by filling this form too
+            </p>
+            <form
+              action="https://formsubmit.co/de0d4f0284034b7f461899a46c69f830"
+              method="POST"
+            >
+              <input type="text" name="_honey" style="display: none" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://ruturajsant.github.io/RS.dev/success.html"
+              />
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="name"
+                required
+              /><br />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+              /><br />
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="phone"
+              /><br />
+              <input type="text" placeholder="Subject" name="_subject" /><br />
+              <textarea
+                placeholder="Your Message"
+                name="message"
+                rows="8"
+                required
+              ></textarea
+              ><br />
+              <button class="button" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="center text">
+        &copy; All rights reserved with Ruturaj Sant &VerticalLine; Ph No.:
+        +91-9766889123 &VerticalLine; e-mail: sant.ruturaj2001@gmail.com
+      </p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+  </body>
 </html>
